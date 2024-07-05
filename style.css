@@ -1,3 +1,51 @@
-body{
-  background-color:aliceblue;
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.page-header img {
+}
+
+.left-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.page-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+a {
+  margin: 0px 10px;
+}
+
+.page-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
