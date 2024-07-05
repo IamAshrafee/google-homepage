@@ -159,22 +159,22 @@ a:hover {
   vertical-align: middle;
 }
 
-input:focus{
+input:focus {
   color: #9aa0a6;
 }
 
-input:valid{
+input:valid {
   color: white;
   font-size: 16px !important;
   line-height: 26px;
 }
 
-.buttons{
+.buttons {
   margin-top: 23px;
-  margin-bottom: 260px;
+  margin-bottom: 257px;
 }
 
-.buttons button{
+.buttons button {
   margin: 0px 5px;
   padding: 0 16px;
   background-color: #303134;
@@ -189,6 +189,6 @@ input:valid{
   border: 1px solid #303134;
 }
 
-.buttons button:hover{
+.buttons button:hover {
   border: 1px solid #9ca0a5c9;
 }
