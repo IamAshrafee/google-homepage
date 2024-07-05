@@ -23,8 +23,18 @@
         <div class="right-section right-main">
           <a href="#">Gmail</a>
           <a href="#">Image</a>
-          <img src="assets/searchlab.png" alt="" />
-          <img src="assets/profile-icon.png" alt="">
+          <svg
+            class="search-lab"
+            focusable="false"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+          >
+            <path
+              d="M209-120q-42 0-70.5-28.5T110-217q0-14 3-25.5t9-21.5l228-341q10-14 15-31t5-34v-110h-20q-13 0-21.5-8.5T320-810q0-13 8.5-21.5T350-840h260q13 0 21.5 8.5T640-810q0 13-8.5 21.5T610-780h-20v110q0 17 5 34t15 31l227 341q6 9 9.5 20.5T850-217q0 41-28 69t-69 28H209Zm221-660v110q0 26-7.5 50.5T401-573L276-385q-6 8-8.5 16t-2.5 16q0 23 17 39.5t42 16.5q28 0 56-12t80-47q69-45 103.5-62.5T633-443q4-1 5.5-4.5t-.5-7.5l-78-117q-15-21-22.5-46t-7.5-52v-110H430Z"
+            ></path>
+          </svg>
+          <img src="assets/profile-icon.png" alt="" class="profile" />
         </div>
       </div>
       <!--Page middle section
@@ -37,6 +47,54 @@
           <div class="search">
             <span class="search-icon material-symbols-outlined"> search </span>
             <input type="search" class="search-input" />
+            <!-- Mic and Scan Icon section-->
+            <div class="searchbar-icons">
+              <div>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="voice-div" aria-label="Search by voice" role="button">
+                <svg class="voice-svg" focusable="false" viewBox="0 0 24 24">
+                  <path
+                    fill="#4285f4"
+                    d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z"
+                  ></path>
+                  <path fill="#34a853" d="m11 18.08h2v3.92h-2z"></path>
+                  <path
+                    fill="#fbbc04"
+                    d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z"
+                  ></path>
+                  <path
+                    fill="#ea4335"
+                    d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="lense-div">
+                <svg class="lense-svg" viewBox="0 0 192 192">
+                  <g>
+                    <circle fill="#34a853" cx="144.07" cy="144" r="16"></circle>
+                    <circle fill="#4285f4" cx="96.07" cy="104" r="24"></circle>
+                    <path
+                      fill="#ea4335"
+                      d="M24,135.2c0,18.11,14.69,32.8,32.8,32.8H96v-16l-40.1-0.1c-8.8,0-15.9-8.19-15.9-17.9v-18H24V135.2z"
+                    ></path>
+                    <path
+                      fill="#fbbc04"
+                      d="M168,72.8c0-18.11-14.69-32.8-32.8-32.8H116l20,16c8.8,0,16,8.29,16,18v30h16V72.8z"
+                    ></path>
+                    <path
+                      fill="#4285f4"
+                      d="M112,24l-32,0L68,40H56.8C38.69,40,24,54.69,24,72.8V92h16V74c0-9.71,7.2-18,16-18h80L112,24z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
           </div>
         </form>
         <!--Buttons -->
