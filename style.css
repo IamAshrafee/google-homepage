@@ -162,3 +162,33 @@ a:hover {
 input:focus{
   color: #9aa0a6;
 }
+
+input:valid{
+  color: white;
+  font-size: 16px !important;
+  line-height: 26px;
+}
+
+.buttons{
+  margin-top: 23px;
+  margin-bottom: 260px;
+}
+
+.buttons button{
+  margin: 0px 5px;
+  padding: 0 16px;
+  background-color: #303134;
+  border-radius: 4px;
+  color: #e8eaed;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid #303134;
+}
+
+.buttons button:hover{
+  border: 1px solid #9ca0a5c9;
+}
