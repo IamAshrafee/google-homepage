@@ -1,194 +1,244 @@
+/* 
+  * Universal box-sizing and base styles 
+  * Mobile-first approach
+*/
 * {
-  margin: 0px;
-  padding: 0px;
-  font-family: arial;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
   font-size: 14px;
 }
 
 body {
   background-color: #202124;
+  color: #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
+  flex-grow: 1;
 }
 
+/* 
+  * Header Styles 
+*/
 .page-header {
-  margin: 0px 5px 0px 15px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 60px;
+  justify-content: flex-end;
   align-items: center;
+  padding: 6px;
   flex-wrap: wrap;
+  min-height: 60px;
 }
 
-.profile {
-  width: 40px;
-  padding: 8px;
-  cursor: pointer;
-}
-.search-lab {
-  width: 24px;
-  padding: 8px;
-  cursor: pointer;
-  fill: white;
+.page-header .left-section {
+  display: none; /* Hidden on mobile */
 }
 
-.left-section {
+.page-header .right-section {
   display: flex;
-  flex-direction: row;
-}
-
-.right-section {
-  display: flex;
-  flex-direction: row;
   align-items: center;
 }
 
-.right-main {
-  line-height: 24px;
-  font-size: 13px !important;
-  color: #ffff !important;
-}
-
-a {
-  padding: 15px;
+.page-header a {
+  padding: 5px 10px;
   text-decoration: none;
   color: #e8e8e8;
-  cursor: pointer;
 }
 
-a:hover {
+.page-header a:hover {
   text-decoration: underline;
 }
 
-.page-footer {
-  padding: 0px 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: rgb(23, 23, 23);
-  height: 47px;
-  vertical-align: middle;
-  flex-wrap: wrap;
+.search-lab {
+  width: 40px;
+  height: 40px;
+  fill: white;
+  padding: 8px;
+  cursor: pointer;
 }
 
+.profile {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+/* 
+  * Main Content (Middle) Styles 
+*/
 .page-middle {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 20px;
 }
 
 .google-logo {
-  margin: 20px 0px;
+  width: 272px;
+  height: 92px;
+  margin-bottom: 28px;
+}
+
+.page-middle form {
+  width: 100%;
 }
 
 .search {
-  max-width: max-content;
   display: flex;
   align-items: center;
-  border: 1px solid rgb(95, 99, 104);
-  border-radius: 28px;
-  height: 46px;
+  border: 1px solid #5f6368;
+  border-radius: 24px;
+  height: 44px;
+  max-width: 584px;
+  background-color: #202124;
+  margin: 0 auto;
 }
 
-.search:hover {
-  background-color: rgb(48, 49, 52);
+.search:hover,
+.search:focus-within {
+  background-color: #303134;
+  border-color: rgba(223, 225, 229, 0);
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
 }
 
 .search-icon {
-  margin: 0px 0px 0px 14px;
+  padding: 0 13px;
   color: #9aa0a6;
 }
 
 .search-input {
-  background: #202124;
-  width: 443px;
-  margin-left: 14px;
-  outline: none;
-  border: none;
+  flex-grow: 1;
   background: transparent;
+  border: none;
+  outline: none;
+  color: #e8eaed;
+  font-size: 16px;
 }
 
 .searchbar-icons {
   display: flex;
-  flex: 0 0 auto;
-  align-items: stretch;
-  flex-direction: row;
-  height: 44px;
+  align-items: center;
+  padding-right: 8px;
 }
 
-.voice-div {
-  flex: 1 0 auto;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  border: 0;
-  background: transparent;
-  outline: none;
+.voice-div, .lense-div {
   padding: 0 8px;
-  width: 24px;
-  line-height: 44px;
+  cursor: pointer;
 }
-.voice-svg {
+
+.voice-svg, .lense-svg {
   height: 24px;
   width: 24px;
-  vertical-align: middle;
-}
-
-.lense-div {
-  flex: 1 0 auto;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  border: 0;
-  background: transparent;
-  outline: none;
-  padding: 0 8px;
-  width: 24px;
-  line-height: 44px;
-  margin: 0px 8px 0px 0px;
-}
-.lense-svg {
-  height: 24px;
-  width: 24px;
-  vertical-align: middle;
-}
-
-input:focus {
-  color: #9aa0a6;
-}
-
-input:valid {
-  color: white;
-  font-size: 16px !important;
-  line-height: 26px;
 }
 
 .buttons {
-  margin-top: 23px;
-  margin-bottom: 257px;
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .buttons button {
-  margin: 0px 5px;
-  padding: 0 16px;
   background-color: #303134;
+  border: 1px solid #303134;
   border-radius: 4px;
   color: #e8eaed;
-  line-height: 27px;
   height: 36px;
-  min-width: 54px;
-  text-align: center;
+  padding: 0 16px;
+  margin: 11px 4px;
   cursor: pointer;
-  user-select: none;
-  border: 1px solid #303134;
 }
 
 .buttons button:hover {
-  border: 1px solid #9ca0a5c9;
+  border: 1px solid #5f6368;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* 
+  * Footer Styles 
+*/
+.page-footer {
+  background-color: #171717;
+  padding: 15px 30px;
+  border-top: 1px solid #3c4043;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.page-footer a {
+  color: #999da2;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.page-footer a:hover {
+  text-decoration: underline;
+}
+
+.page-footer .left-section,
+.page-footer .right-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 
+  * Media Queries for larger screens (Desktop-first enhancements)
+*/
+
+/* For tablets and larger */
+@media (min-width: 600px) {
+  .page-footer {
+    justify-content: space-between;
+  }
+}
+
+/* For desktops */
+@media (min-width: 768px) {
+  .page-header {
+    justify-content: space-between;
+  }
+  .page-header .left-section {
+    display: flex;
+  }
+}
+
+/* For very large screens */
+@media (min-width: 1200px) {
+  .google-logo {
+    width: 336px; /* Increased from 272px */
+    height: 112px; /* Increased from 92px */
+  }
+
+  .search {
+    height: 48px; /* Increased from 44px */
+    max-width: 680px; /* Increased from 584px */
+  }
+
+  .search-input {
+    font-size: 18px; /* Increased from 16px */
+  }
+
+  .buttons button {
+    height: 40px; /* Increased from 36px */
+    font-size: 16px; /* Increased from 14px */
+    margin: 15px 6px;
+  }
+
+  .page-header a,
+  .page-footer a {
+    font-size: 15px; /* Increased from 14px */
+  }
 }
